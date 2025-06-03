@@ -46,3 +46,53 @@ list2 = [1,2,3,4,5,6,7,8,9, True]
 list3 = [1,2,3,4,5,6,7,8,9, False]
 print(all(list2))
 print(all(list3))
+
+#Method in List
+list4 = [1,3,2,4,6,5,7,8,9, 99]
+# 1 - list.append() - Add an element at the end of the list
+list4.append(100)
+print(list4) # [1, 3, 2, 4, 6, 5, 7, 8, 9, 99, 100]
+
+# 2 - list.clear() - Remove all the elements from the list
+list4.clear()
+print(list4) # []
+
+# 3 - list.copy() - Return a copy of the list
+list4 = [1,3,2,4,6,5,7,8,9, 99]
+list5 = list4.copy()
+print(list5) # [1, 3, 2, 4, 6, 5, 7, 8, 9, 99]
+
+#4 - list.extend() - Add the elements of a list (or any iterable), to the end of the current list
+list5 = [666, 7777, 888]
+list4.extend(list5)
+print(list4) # [1, 3, 2, 4, 6, 5, 7, 8, 9, 99, 100, 200, 300, 666, 7777, 888]
+list4.extend([100,200,300])
+print(list4) # [1, 3, 2, 4, 6, 5, 7, 8, 9, 99, 100, 200, 300]
+
+# 5 - list.index() - Return the index of the first element with the specified value
+list4 = [1,3,2,4,6,5,7,8,9, 99]
+print(list4.index(9)) # 8
+
+# 6 - list.insert() - Add an element at the specified position
+list4.insert(0, 9009)
+print(list4) # [9009, 1, 3, 2, 4, 6, 5, 7, 8, 9, 99]
+
+# 7 - list.pop() - Remove the element at the specified position
+list4.pop(0)
+print(list4) # [1, 3, 2, 4, 6, 5, 7, 8, 9, 99]
+
+# 8 - list.remove() - Remove the item with the specified value
+list4.remove(99)
+print(list4) # [1, 3, 2, 4, 6, 5, 7, 8, 9]
+
+# 9 - list.reverse() - Reverse the order of the elements in the list
+list4.reverse()
+print(list4) # [9, 8, 7, 5, 6, 4, 2, 3, 1]
+
+# 10 - list.count() - Return the number of elements with the specified value
+list6 = [1,3,2,9,4,6,5,9,9,7,8,9, 99]
+print(list6.count(9)) # 4
+
+# 11 - list.sort() - Sort the list
+list4.sort()
+print(list4) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 99]
